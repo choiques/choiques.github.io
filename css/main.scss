@@ -1572,14 +1572,17 @@ $baseurl: '{{ site.baseurl }}/images';
 			@include vendor('transition', 'opacity #{_duration(fadein)} ease-in-out');
 			@include vendor('transition-delay', '1.25s');
 			content: '';
-			background: _palette(bg);
+			// background: _palette(bg);
+      background: url('/images/cancha.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
 			display: block;
 			width: 100%;
 			height: 100%;
 			position: absolute;
 			left: 0;
 			top: 0;
-			opacity: 0;
+			opacity: 0.5;
 		}
 
 		@include breakpoint(small) {
@@ -1636,7 +1639,7 @@ $baseurl: '{{ site.baseurl }}/images';
 				width: 70%;
 
 				p {
-					color: inherit;
+					opacity: 0;
 				}
 			}
 
